@@ -1,0 +1,11 @@
+version: '3'
+services:
+  api:
+    image: ulfix-test
+    container_name: ulfix
+    restart: unless-stopped
+    build: .
+    ports: 
+    - "81:3001"
+    volumes: 
+    - .:/home/node/app
